@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <cs50.h>
+
+void print_row(int a, int s);
+
+int main (void)
+{
+    int a;
+    do
+    {
+        a = get_int("a:");
+    }
+    while ( a < 1);
+
+    for (int s = 0; s < a; s++)
+    {
+        print_row (a, s);
+    }
+}
+void print_row(int a, int s)
+{
+    for (int filiiki = 0; filiiki < a - s - 1; filiiki++ )
+    {
+        printf(" ");
+    }
+
+    for (int miliiki = 0; miliiki < s + 1; miliiki++)
+    {
+        printf("#");
+    }
+    printf("\n");
+}
